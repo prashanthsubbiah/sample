@@ -1,7 +1,7 @@
 {
-  "name": "sample",
+  "name": "flippend",
   "version": "0.1.0",
-  "description": "Sample App created to test node",
+  "description": "Next Gen chat application",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
