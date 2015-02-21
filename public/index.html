@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html ng-app="indexApp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Users List</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<style>
+		html 					{ overflow-y:scroll; }
+		body 					{ padding-top:50px; }
+		.userinp 			{ padding-top:150px; }
+	</style>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="core.js"></script>
+</head>
+<body ng-controller="indexController">
+<div class="container">
+  <div class="userinp">
+  <form class="col-xs-3">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" ng-model="formData.name" placeholder="Enter Name">
+    </div>
+    <div class="form-group">
+    <label for="name">Gender</label>
+    <select class="form-control" ng-model="formData.gender">
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+    </div>
+    <button type="submit" class="btn btn-primary" ng-click="joinChat()">Submit</button>
+  </form>
+  </div>
+</div>
+</body>
+</html>
