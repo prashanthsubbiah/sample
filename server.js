@@ -4,6 +4,7 @@ var morgan = require('morgan');
 var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var port  	 = process.env.PORT || 8080; 				// Port Number
 var ServiceHandler = require('./services/serviceHandler.js');
 var serviceHandler = new ServiceHandler();
 var configDB = require('./config/database'); 
@@ -14,7 +15,7 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(express.static(__dirname + '/public')); 
 app.use(morgan('dev')); //Logger to log the Requests
 
-var server = app.listen(3000,function(){
+var server = app.listen(port,function(){
   var host = server.address().address;
   var port = server.address().port;
   console.log('app listening at http://%s:%s', host, port);
